@@ -1,0 +1,43 @@
+def calcular_promedio(numeros):
+   """
+   Calcula el promedio aritmético de una lista de números.
+   
+   Args:
+       numeros (list): Lista de números
+       
+   Returns:
+       float: Promedio de los números
+       
+   Raises:
+       ValueError: Si la lista está vacía
+       
+   Example:
+       >>> calcular_promedio([1, 2, 3, 4, 5])
+       3.0
+   """
+   # Validar que la lista no esté vacía
+   if not numeros:
+       raise ValueError("La lista no puede estar vacía")
+   
+   # Calcular la suma total de todos los números
+   suma_total = sum(numeros)
+   
+   # Obtener la cantidad de elementos
+   cantidad = len(numeros)
+   
+   # Calcular y retornar el promedio (suma / cantidad)
+   promedio = suma_total / cantidad
+   return promedio
+
+
+# Ejemplo de uso
+if __name__ == "__main__":
+   # Lista de calificaciones de un estudiante
+   calificaciones = [85, 92, 78, 96, 88]
+   
+   # Calcular el promedio
+   resultado = calcular_promedio(calificaciones)
+   
+   # Mostrar el resultado
+   print(f"Calificaciones: {calificaciones}")
+   print(f"Promedio: {resultado}")
